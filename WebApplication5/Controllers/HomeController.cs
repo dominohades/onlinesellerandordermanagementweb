@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +8,7 @@ namespace WebApplication5.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: Home
         public ActionResult Index()
         {
             return View();
@@ -15,15 +16,11 @@ namespace WebApplication5.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

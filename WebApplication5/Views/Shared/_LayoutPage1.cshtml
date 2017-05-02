@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+    <table style="width:100%;">
+        <tr>
+        <td>logo of the website</td>
+            <td>website name</td>
+        
+        <td>SignIn/SignUp</td>
+           </tr>
+
+    <tr>
+        <td>left Sidebar:
+        <br/>
+
+        @Html.ActionLink("Home", "Index", "Home");
+        <br/>
+            @Html.ActionLink("About", "About", "Home");
+            <br />
+            @Html.ActionLink("Contact", "Contact", "Home");
+            <br />
+        
+
+        </td>
+        <td>@RenderBody()</td>
+        <td>Right Sidebar</td>
+
+    </tr>
+
+    <tr><td>footer left</td>
+        <td>footer middle</td>
+        <td>footer right</td>
+    </tr>
+    
+    </table>
+
+
+
+
+
+
+
+    
+        
+    </div>
+</body>
+</html>
