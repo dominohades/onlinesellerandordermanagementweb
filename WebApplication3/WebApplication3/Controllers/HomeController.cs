@@ -14,7 +14,7 @@ namespace WebApplication3.Controllers
             return View();
         }
 
-      public ActionResult About()
+      public ActionResult about()
         {
             return View();
         }
@@ -23,7 +23,15 @@ namespace WebApplication3.Controllers
         {
             return View();
         }
-    
+        public ActionResult wheretobuy()
+        {
+            return View();
+        }
+        public ActionResult faqs()
+        {
+            return View();
+        }
+
 
 
 
