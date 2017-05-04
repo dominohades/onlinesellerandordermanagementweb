@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>ShopAholic</title>
+</head>
+
+<style>
+    .container {
+        width: 70%;
+        height: 50px;
+        overflow: hidden;
+        background-color: #333;
+        font-family: Arial;
+    }
+
+        .container a {
+            width: 140px;
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+    .dropdown {
+        width: 180px;
+        font-size: 20px;
+        float: left;
+        overflow: hidden;
+    }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+        }
+
+        .container a:hover, .dropdown:hover .dropbtn {
+            color: cyan;
+        }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 15px;
+    }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+
+
+    input[type=text] {
+        float: right;
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+
+        input[type=text]:focus {
+            width: 400px;
+        }
+
+    .topcontainer {
+        border: 1px solid;
+        background-color: gray;
+        height: 150px;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+
+    .space {
+        height: 50px;
+        width: 70%;
+    }
+
+    .reg {
+        color: white;
+        font-size: 18px;
+        float: right;
+        width: 10px;
+    }
+
+        .reg :hover {
+            color: cyan;
+        }
+
+
+
+    .li {
+        color: white;
+        font-size: 18px;
+        float: right;
+    }
+
+        .li :hover {
+            color: cyan;
+        }
+
+        body-view{
+            border:4px solid;
+            border-color:green;
+           height:400px;
+
+
+        }
+</style>
+
+<body>
+
+
+
+    <div class="topcontainer">
+
+        <center>
+            <div class="space">
+                <form>
+                    <input type="text" name="search" placeholder="Search..">
+                </form>
+                <a href="#" class="reg">Register </a>
+                <a href="#" class="li"> Log In</a>
+               
+            </div>
+            
+            <div class="container">
+                <div class="dropdown">
+                    <button class="dropbtn">Shop</button>
+                    <div class="dropdown-content">
+                        <a href="#">Men's Wear</a>
+                        <a href="#">Women's Wear</a>
+                        <a href="#">Kid's Wear</a>
+                    </div>
+                </div>
+
+                @Html.ActionLink("Where to Buy", "wheretobuy", "Home")
+                @Html.ActionLink("About", "about", "Home")
+                @Html.ActionLink("Contact", "Contact", "Home")
+                @Html.ActionLink("FAQ's", "faqs", "Home")
+                @Html.ActionLink("Content", "content", "Home")
+               
+            </div>
+
+
+        </center>
+    </div>
+
+
+    <div class="body-view">
+        @RenderBody()
+    </div>
+
+
+
+
+</body>
+</html>
