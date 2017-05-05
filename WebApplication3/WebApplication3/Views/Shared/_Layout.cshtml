@@ -74,7 +74,7 @@
 
 
 
-    input[type=text] {
+    .searchbar {
         float: right;
         width: 130px;
         box-sizing: border-box;
@@ -90,7 +90,7 @@
         transition: width 0.4s ease-in-out;
     }
 
-        input[type=text]:focus {
+       .searchbar:focus {
             width: 400px;
         }
 
@@ -117,7 +117,7 @@
     }
 
         .reg :hover {
-            color: cyan;
+           color:aqua;
         }
 
 
@@ -129,16 +129,10 @@
     }
 
         .li :hover {
-            color: cyan;
+            color:aqua;
         }
 
-        body-view{
-            border:4px solid;
-            border-color:green;
-           height:400px;
-
-
-        }
+      
 </style>
 
 <body>
@@ -150,8 +144,9 @@
         <center>
             <div class="space">
                 <form>
-                    <input type="text" name="search" placeholder="Search..">
+                    <input class="searchbar" type="text" name="search" placeholder="Search..">
                 </form>
+
                 <a href="#" class="reg">Register </a>
                 <a href="#" class="li"> Log In</a>
                
